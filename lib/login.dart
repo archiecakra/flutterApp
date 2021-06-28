@@ -8,6 +8,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -20,14 +21,46 @@ class Login extends StatelessWidget {
                 height: 150,
                 alignment: Alignment.center,
               ),
-              RichText(
-                  text: TextSpan(
-                      text: "Hello ",
-                      style: DefaultTextStyle.of(context).style,
-                      children: <TextSpan>[
-                    TextSpan(text: "Login "),
-                    TextSpan(text: "Login "),
-                  ])),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                      text: TextSpan(
+                          text: "Welcome to ",
+                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          children: <TextSpan>[
+                        TextSpan(
+                            text: "PortApp",
+                            style: TextStyle(
+                                color: Colors.amber[900],
+                                fontWeight: FontWeight.bold)),
+                      ])),
+                ],
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    // fillColor: Colors.amber[900],
+                    // filled: true,
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.account_circle),
+                    labelText: "Username",
+                    hintText: "Fill in your username"),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    // fillColor: Colors.amber[900],
+                    // filled: true,
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.account_circle),
+                    labelText: "Password",
+                    hintText: "Fill in your password"),
+              )
             ],
           ),
         ),
