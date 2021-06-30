@@ -60,6 +60,14 @@ class Login extends StatelessWidget {
                     prefixIcon: Icon(Icons.account_circle),
                     labelText: "Password",
                     hintText: "Fill in your password"),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Text("Sign In")),
               )
             ],
           ),
